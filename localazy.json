@@ -6,22 +6,68 @@
 
       "files": [
             {
-                "pattern": "src/translations/en.json",
-                "lang": "inherited",
-                "path": "${path}"
+              "pattern": "src/translations/en.json",
+              "lang": "inherited",
+              "path": "${path}"
             },
             {
-              "group": "non-source",
+              "group": "group-e",
               "pattern": "src/translations/*.json",
               "excludes": ["src/translations/en.json"],
               "lang": "${autodetectLang}",
-              "path": "${path}"
-          }
-        ] 
+              "path": "${path}",
+              "conditions": [
+                ["startsWith: e, ${file}"]
+              ]
+            },
+            {
+              "group": "group-1",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}",
+              "conditions": [
+                ["startsWith: a, ${file}"],
+                ["startsWith: b, ${file}"],
+                ["startsWith: c, ${file}"],
+                ["startsWith: d, ${file}"],
+                ["startsWith: f, ${file}"],
+                ["startsWith: g, ${file}"],
+                ["startsWith: h, ${file}"],
+                ["startsWith: i, ${file}"],
+                ["startsWith: j, ${file}"],
+                ["startsWith: k, ${file}"]
+              ]
+            },
+            {
+              "group": "group-2",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}",
+              "conditions": [
+                ["startsWith: m, ${file}"],
+                ["startsWith: n, ${file}"],
+                ["startsWith: o, ${file}"],
+                ["startsWith: p, ${file}"],
+                ["startsWith: q, ${file}"],
+                ["startsWith: r, ${file}"],
+                ["startsWith: s, ${file}"],
+                ["startsWith: t, ${file}"],
+                ["startsWith: u, ${file}"],
+                ["startsWith: v, ${file}"],
+                ["startsWith: w, ${file}"],
+                ["startsWith: x, ${file}"],
+                ["startsWith: y, ${file}"],
+                ["startsWith: z, ${file}"]
+              ]
+            }
+      ] 
     },
     
     "download": {
       "includeSourceLang": false,
       "files": "${path}/${lang}.json"
     }
+
   }

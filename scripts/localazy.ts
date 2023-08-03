@@ -1,7 +1,6 @@
 import "dotenv/config"
 import { execSync } from "child_process";
 import path from "path";
-// import { existsSync } from "fs";
 
 /**
  * Creates a path to an executable in the node_modules/.bin directory. Each
@@ -14,8 +13,17 @@ function getBinFile(cmd) {
   return path.join('node_modules', '.bin', cmd);
 }
 
-if (process.argv[process.argv.length - 1] === '--upload') {
-  execSync(`${getBinFile('localazy')} upload non-source -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
-} else if (process.argv[process.argv.length - 1] === '--download') {
-  execSync(`${getBinFile('localazy')} download -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
+function runLocalazy() {
+  const groups = ['group-e', 'group-1', 'group-2'];
+
+  groups.forEach(group => {
+    if (process.argv[process.argv.length - 1] === '--upload') {
+      execSync(`${getBinFile('localazy')} upload ${group} -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
+    } else if (process.argv[process.argv.length - 1] === '--download') {
+      execSync(`${getBinFile('localazy')} download -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
+    }
+  });
 }
+
+runLocalazy();
+

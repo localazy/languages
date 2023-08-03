@@ -1,0 +1,24 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  execute:
+    runs-on: [self-hosted, Linux]
+    env: 
+      INPUT_TOKEN: ''
+    steps:
+    - name: Set work folder permissions    
+      run: pwd && sudo chown -R $USER:$USER ./
+    - uses: actions/checkout@v2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+    - name: Build project
+      run: npm run build
+    - name: Publish to npm
+      if: startsWith(github.ref, 'refs/tags/v')
+      run:
+        npm publish
