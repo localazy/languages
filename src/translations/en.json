@@ -1,9 +1,5 @@
 {
-  "important": true,
-  "localazyId": 0,
-  "name": "Latin American Spanish",
-  "rtl": false,
-  "locale": "es_419",
+  "es_419": "Latin American Spanish",
   "zh#Hans": "Simplified Chinese",
   "aa": "Afar",
   "aa_DJ": "Afar (Djibouti)",
