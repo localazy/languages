@@ -15,7 +15,9 @@
     "minor": "standard-version --release-as minor",
     "major": "standard-version --release-as major",
     "release": "git push && git push --tags",
-    "generate-types": "npx ts-node --esm ./scripts/build-translations-index.ts"
+    "generate-types": "npx ts-node --esm ./scripts/build-translations-index.ts",
+    "upload-translations": "npx ts-node --esm ./scripts/localazy.ts -- --upload",
+    "download-translations": "npx ts-node --esm ./scripts/localazy.ts -- --download"
   },
   "repository": {
     "type": "git",
@@ -32,10 +34,12 @@
   "author": "Localazy",
   "homepage": "https://github.com/localazy/languages.git",
   "devDependencies": {
+    "@localazy/cli": "^1.7.3",
     "@types/fs-extra": "^11.0.1",
     "@types/node": "^18.13.0",
     "@typescript-eslint/eslint-plugin": "^6.2.0",
     "@typescript-eslint/parser": "^6.2.0",
+    "dotenv": "^16.3.1",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",

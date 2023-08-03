@@ -1,5 +1,9 @@
 import { Language } from "./language"
 
+export const findLocalazyLanguageByLocale = (locale: string): Language | undefined => {
+  return getLocalazyLanguages().find((language) => language.locale === locale);
+}
+
 export const getLocalazyLanguages = (): Language[] => [
   {
       "important": true,

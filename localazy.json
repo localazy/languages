@@ -1,0 +1,27 @@
+{
+    "upload": {  
+      "type": "json",
+      "deprecateMissing": true,
+      "filterSource": false,
+
+      "files": [
+            {
+                "pattern": "src/translations/en.json",
+                "lang": "inherited",
+                "path": "${path}"
+            },
+            {
+              "group": "non-source",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}"
+          }
+        ] 
+    },
+    
+    "download": {
+      "includeSourceLang": false,
+      "files": "${path}/${lang}.json"
+    }
+  }
