@@ -1,0 +1,49 @@
+{
+  "name": "@localazy/languages",
+  "version": "0.0.1",
+  "description": "Available Localazy Languages",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib/* && npm run generate-types && npm run build:main && npm run build:module",
+    "build:main": "tsc -p tsconfig.build.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "lint": "eslint . --ext .ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "patch": "standard-version",
+    "minor": "standard-version --release-as minor",
+    "major": "standard-version --release-as major",
+    "release": "git push && git push --tags",
+    "generate-types": "npx ts-node --esm ./scripts/build-translations-index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localazy/languages.git"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "typescript",
+    "localazy",
+    "languages"
+  ],
+  "author": "Localazy",
+  "homepage": "https://github.com/localazy/languages.git",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "fs-extra": "^11.1.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.5"
+  }
+}
