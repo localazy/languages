@@ -1,1 +1,0 @@
-Based on https://github.com/el3um4s/typescript-npm-package-starter
