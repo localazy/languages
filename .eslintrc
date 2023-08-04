@@ -13,6 +13,6 @@
 
   },
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "tsconfigRootDir": "."
   }
 }
