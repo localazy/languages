@@ -1,6 +1,6 @@
 {
   "name": "@localazy/languages",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Available Localazy Languages",
   "main": "lib/main/index.js",
   "typings": "lib/main/index.d.ts",
