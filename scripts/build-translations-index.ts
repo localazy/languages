@@ -5,14 +5,14 @@ async function buildTranslationsIndex() {
 
   const indexFile = translationFolder.reduce((acc, file) => {
     if (file === 'index.ts') return acc;
-    console.log(file)
     const language = /(.*)\.json/.exec(file)?.[1];
-    let exportDts = `import * as ${language} from "./${file}";\n`;
-    exportDts += `export {${language}}\n`;
+    let sanitizedLanguage = language?.replace(/[-#]/g, '_') || '';
+    sanitizedLanguage = sanitizedLanguage === 'new' ? 'new_' : sanitizedLanguage;
+    let exportDts = `import * as ${sanitizedLanguage} from "./${file}";\n`;
+    exportDts += `export {${sanitizedLanguage}};\n`;
     acc.push(exportDts);
     return acc;
   }, [] as string[])
-  console.log(indexFile)
 
   fse.writeFileSync('./src/translations/index.ts', indexFile.join('\n'))
 }

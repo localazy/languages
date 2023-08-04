@@ -1,3 +1,3 @@
 export type { Language } from "./language";
-export { getLocalazyLanguages } from "./languages";
+export { getLocalazyLanguages } from "./localazy-languages";
 import "./translations";
