@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "rimraf lib/* && npm run generate-types && npm run build:main && npm run build:module",
+    "build": "rimraf lib/* && npm run build-scripts && npm run build:main && npm run build:module",
     "build:main": "tsc -p tsconfig.build.json",
     "build:module": "tsc -p tsconfig.module.json",
     "lint": "eslint . --ext .ts",
@@ -15,7 +15,7 @@
     "minor": "standard-version --release-as minor",
     "major": "standard-version --release-as major",
     "release": "git push && git push --tags",
-    "generate-types": "npx ts-node --esm ./scripts/build-translations-index.ts",
+    "build-scripts": "npx ts-node --esm ./scripts/build/index.ts",
     "upload-translations": "npx ts-node --esm ./scripts/localazy.ts -- --upload",
     "download-translations": "npx ts-node --esm ./scripts/localazy.ts -- --download"
   },
