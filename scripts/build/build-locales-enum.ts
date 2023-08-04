@@ -20,7 +20,7 @@ async function buildLocalesEnum() {
 
   content += "}\n";
 
-  fse.writeFileSync('./src/locales.ts', content)
+  fse.writeFileSync('./src/locales.ts', content, { encoding: 'utf-8'})
 }
 
 buildLocalesEnum();

@@ -1,2 +1,2 @@
 import "./build-locales-enum";
-import "./build-translations-index";
+import "./extract-languages-list";
