@@ -70,8 +70,3 @@ You may import the languages list like this.
 ```javascript
 import { languagesList} from "@localazy/languages";
 ```
-
-## Contributing
-To add translations for additional languages or to improve existing translations, join our [Localazy project](https://localazy.com/p/localazy-languages).
-
-Otherwise you may either open a PR or create an issue.
