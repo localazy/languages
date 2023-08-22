@@ -14,7 +14,7 @@ function getBinFile(cmd) {
 }
 
 function runLocalazy() {
-  const groups = ['group-e', 'group-1', 'group-2'];
+  const groups = ['group-e', 'group-1', 'group-2', 'group-3', "group-4", "group-5"];
 
   groups.forEach(group => {
     if (process.argv[process.argv.length - 1] === '--upload') {

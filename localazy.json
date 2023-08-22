@@ -29,14 +29,7 @@
               "conditions": [
                 ["startsWith: a, ${file}"],
                 ["startsWith: b, ${file}"],
-                ["startsWith: c, ${file}"],
-                ["startsWith: d, ${file}"],
-                ["startsWith: f, ${file}"],
-                ["startsWith: g, ${file}"],
-                ["startsWith: h, ${file}"],
-                ["startsWith: i, ${file}"],
-                ["startsWith: j, ${file}"],
-                ["startsWith: k, ${file}"]
+                ["startsWith: c, ${file}"]
               ]
             },
             {
@@ -46,13 +39,49 @@
               "lang": "${autodetectLang}",
               "path": "${path}",
               "conditions": [
+                ["startsWith: d, ${file}"],
+                ["startsWith: f, ${file}"],
+                ["startsWith: g, ${file}"],
+                ["startsWith: h, ${file}"],
+                ["startsWith: i, ${file}"],
+                ["startsWith: j, ${file}"]
+              ]
+            },
+            {
+              "group": "group-3",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}",
+              "conditions": [
+                ["startsWith: k, ${file}"],
                 ["startsWith: m, ${file}"],
-                ["startsWith: n, ${file}"],
+                ["startsWith: n, ${file}"]
+              ]
+            },
+            {
+              "group": "group-4",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}",
+              "conditions": [
+      
                 ["startsWith: o, ${file}"],
                 ["startsWith: p, ${file}"],
                 ["startsWith: q, ${file}"],
                 ["startsWith: r, ${file}"],
-                ["startsWith: s, ${file}"],
+                ["startsWith: s, ${file}"]
+              ]
+            },
+            {
+              "group": "group-5",
+              "pattern": "src/translations/*.json",
+              "excludes": ["src/translations/en.json"],
+              "lang": "${autodetectLang}",
+              "path": "${path}",
+              "conditions": [
+      
                 ["startsWith: t, ${file}"],
                 ["startsWith: u, ${file}"],
                 ["startsWith: v, ${file}"],
