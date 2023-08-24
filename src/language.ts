@@ -4,5 +4,4 @@ export type Language = {
   name: string;
   rtl: boolean;
   locale: string;
-  englishName: string;
 }
