@@ -1,5 +1,5 @@
 export type { Language } from "./language";
 export * from "./localazy-languages";
-import * as languagesList from "./languages-list.json";
-export { languagesList };
+import * as localizedLanguagesList from "./language-lists/localized-language-list.json";
+export { localizedLanguagesList };
 export * from "./locales"
