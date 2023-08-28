@@ -1,0 +1,26 @@
+{
+  "upload": {  
+    "type": "js",
+    "deprecateMissing": true,
+    "filterSource": false,
+    "files": [
+          {
+            "pattern": "src/language-lists/translations/en.json",
+            "lang": "inherited",
+            "path": "${path}"
+          },
+          {
+            "group": "all",
+            "pattern": "src/language-lists/translations/*.json",
+            "excludes": ["src/language-lists/translations/en.json"],
+            "lang": "${autodetectLang}",
+            "path": "${path}"
+          }
+      ] 
+  },
+  
+  "download": {
+    "includeSourceLang": false,
+    "files": "${path}/${lang}.json"
+  }
+}

@@ -14,15 +14,11 @@ function getBinFile(cmd) {
 }
 
 function runLocalazy() {
-  const groups = ['group-e', 'group-1', 'group-2', 'group-3', "group-4", "group-5"];
-
-  groups.forEach(group => {
-    if (process.argv[process.argv.length - 1] === '--upload') {
-      execSync(`${getBinFile('localazy')} upload ${group} -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
-    } else if (process.argv[process.argv.length - 1] === '--download') {
-      execSync(`${getBinFile('localazy')} download -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
-    }
-  });
+  if (process.argv[process.argv.length - 1] === '--upload') {
+    execSync(`${getBinFile('localazy')} upload all -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
+  } else if (process.argv[process.argv.length - 1] === '--download') {
+    execSync(`${getBinFile('localazy')} download -w ${process.env.WRITE_KEY} -r ${process.env.READ_KEY}`, {stdio: 'inherit'});
+  }
 }
 
 runLocalazy();

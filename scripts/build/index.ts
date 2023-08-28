@@ -1,2 +1,4 @@
 import "./build-locales-enum";
-import "./extract-languages-list";
+import "./build-english-language-list";
+import "./build-language-translations-from-cldr";
+import "./build-translations-index";
