@@ -8,7 +8,7 @@ export type ParsedLanguageLocale = {
   script?: string;
 };
 
-const languages = ['cs'];
+const languages = ['cs', 'es'];
 
 const substringBefore = (value: string, before: string, missingDelimiterValue?: string): string => {
   const beforeIndex = value.indexOf(before);
