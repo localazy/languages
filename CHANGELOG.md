@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/localazy/languages/compare/v0.1.9...v1.1.0) (2025-03-31)
+
 ## [1.0.0](https://github.com/localazy/languages/compare/v0.1.9...v1.0.0) (2024-08-26)
 
 ### [0.1.11](https://github.com/localazy/languages/compare/v0.1.10...v0.1.11) (2024-07-02)
