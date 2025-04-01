@@ -2,10 +2,23 @@
   "name": "@localazy/languages",
   "version": "1.0.0",
   "description": "Available Localazy Languages",
+  "keywords": [
+    "typescript",
+    "localazy",
+    "languages"
+  ],
+  "homepage": "https://github.com/localazy/languages.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/localazy/languages.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Localazy",
+    "email": "team@localazy.com",
+    "url": "https://localazy.com"
+  },
   "type": "module",
-  "types": "./dist/languages.d.ts",
-  "module": "./dist/languages.js",
-  "main": "./dist/languages.js",
   "exports": {
     ".": {
       "import": {
@@ -20,57 +33,44 @@
     "./data/*": "./dist/data/*.json",
     "./data/translations/*": "./dist/data/translations/*.json"
   },
-  "scripts": {
-    "build": "rimraf dist && npm run main-ts:build && npm run pre-build-scripts && vite build --mode production && npm run post-build-scripts",
-    "main-ts:build": "reexport src/index.ts",
-    "pre-build-scripts": "./scripts/pre-build/index.mjs",
-    "post-build-scripts": "./scripts/post-build/index.mjs",
-    "lint": "npm run lint:command",
-    "lint:fix": "npm run lint:command -- --fix",
-    "lint:command": "eslint --cache --cache-location .cache/eslint/ --cache-strategy content src",
-    "prettier": "npm run prettier:command -- --check",
-    "prettier:fix": "npm run prettier:command -- --write",
-    "prettier:command": "prettier --cache --cache-location .cache/prettier/ --cache-strategy content src"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/localazy/languages.git"
-  },
+  "main": "./dist/languages.js",
+  "module": "./dist/languages.js",
+  "types": "./dist/languages.d.ts",
   "files": [
     "dist/**/*"
   ],
-  "keywords": [
-    "typescript",
-    "localazy",
-    "languages"
-  ],
-  "engines": {
-    "node": ">=16",
-    "npm": ">=8.5"
+  "scripts": {
+    "build": "npm run main-ts:build && npm run pre-build-scripts && vite build --mode production && npm run post-build-scripts",
+    "check": "npm run prettier && npm run lint && npm run typecheck && npm run build",
+    "check:fix": "npm run prettier:fix && npm run lint:fix",
+    "lint": "eslint --cache --cache-location .cache/eslint .",
+    "lint:fix": "eslint --fix .",
+    "main-ts:build": "reexport src/index.ts",
+    "post-build-scripts": "./scripts/post-build/index.mjs",
+    "pre-build-scripts": "./scripts/pre-build/index.mjs",
+    "prettier": "prettier --check --cache --cache-location .cache/prettier .",
+    "prettier:fix": "prettier --write .",
+    "typecheck": "tsc --noEmit"
   },
-  "author": "Localazy",
-  "homepage": "https://github.com/localazy/languages.git",
+  "prettier": "@localazy/prettier-config",
   "devDependencies": {
-    "@localazy/cli": "^1.7.3",
-    "@types/fs-extra": "^11.0.1",
-    "@types/node": "^22.13.14",
-    "@typescript-eslint/eslint-plugin": "^8.19.1",
-    "@typescript-eslint/parser": "^8.19.1",
-    "dotenv": "^16.3.1",
-    "eslint": "^8.57.1",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.2.5",
-    "eslint-plugin-promise": "^6.1.1",
+    "@localazy/cli": "^1.7.16",
+    "@localazy/eslint-config": "^1.0.0-beta.2",
+    "@localazy/prettier-config": "^1.0.0-beta.1",
+    "@localazy/tsconfig": "^1.0.0-beta.3",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.16",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.23.0",
     "fs-extra": "^11.1.1",
     "prettier": "3.5.3",
     "reexport": "^1.4.1",
-    "standard-version": "^9.5.0",
-    "typescript": "^4.9.5",
-    "typescript-eslint": "^8.28.0",
+    "typescript": "^5.8.2",
     "vite": "^6.2.4",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8.5"
   }
 }

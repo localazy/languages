@@ -1,7 +1,6 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
-import packageJson from './package.json';
 
 export default defineConfig({
   resolve: {
@@ -23,7 +22,11 @@ export default defineConfig({
     minify: false,
     sourcemap: true,
     rollupOptions: {
-      external: [...Object.keys(packageJson.devDependencies || {})],
+      output: {
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name][extname]',
+      },
     },
   },
 });
