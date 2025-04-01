@@ -22,7 +22,6 @@ async function runCommand() {
 }
 
 runCommand().catch((err) => {
-  // eslint-disable-next-line no-console
   logger.error(err);
   process.exit(1);
 });
