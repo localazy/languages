@@ -192,3 +192,31 @@ console.log(cldrLanguages);
 //  ...
 // }
 ```
+
+## ℹ️ Links
+
+- [Localazy API documentation](https://localazy.com/docs/api)
+- [Articles about the Localazy API](https://localazy.com/tags/api)
+
+## 🛟 Support
+
+Join the [Localazy Discussion Forum](https://discuss.localazy.com/) to discuss all things localization.
+
+If you encounter any problems or have questions, you can use our forum, GitHub issues or contact us at
+team@localazy.com.
+
+## ❤️ Localazy Ecosystem
+
+Check out other npm packages from Localazy:
+
+|                                                                                                                                  | NPM package                                                                      | Description                          |
+| :------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------ |
+| <img src="https://localazy.com/directus9/assets/3f76ff7b-0e74-4046-bb03-4ca99c3b66d5" width="50" height="50" alt="cli">          | [@localazy/cli](https://www.npmjs.com/package/@localazy/cli)                     | Localazy CLI tool.                   |
+| <img src="https://localazy.com/directus9/assets/20866781-e69b-4e01-9456-05437487b75c" width="50" height="50" alt="localazy-api"> | [@localazy/api-client](https://www.npmjs.com/package/@localazy/api-client)       | Localazy API client.                 |
+| <img src="https://localazy.com/directus9/assets/1dd05c76-e517-4aea-a3d8-49cfddb40056" width="50" height="50" alt="strapi">       | [@localazy/strapi-plugin](https://www.npmjs.com/package/@localazy/strapi-plugin) | The official Localazy Strapi plugin. |
+
+Discover all available [integration options and localization examples](https://github.com/localazy).
+
+## 📜 License
+
+Code released under the [MIT license](LICENSE).
