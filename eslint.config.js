@@ -3,10 +3,9 @@ import js from '@eslint/js';
 import typescript from 'typescript-eslint';
 import prettier from 'eslint-plugin-prettier/recommended';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
-import { defineConfig } from 'eslint/config';
 
 /** @type {import('eslint').Linter.Config[]} */
-export default defineConfig([
+export default [
   {
     ignores: ['node_modules', 'coverage', 'html', 'dist', 'typedoc', 'scripts'],
   },
@@ -62,4 +61,4 @@ export default defineConfig([
 
   // prettier
   prettier,
-]);
+];
