@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import fse from 'fs-extra';
+import { exec } from 'node:child_process';
 import { basename } from 'path';
 import { fileURLToPath } from 'url';
 import localazyLanguages from '../../src/data/localazy-languages.json' with { type: 'json' };
@@ -28,7 +29,12 @@ async function runCommand() {
 
   content += '}\n';
 
-  fse.writeFileSync('./src/enums/locales.ts', content, { encoding: 'utf-8' });
+  const enumPath = './src/enums/locales.ts';
+  fse.writeFileSync(enumPath, content, { encoding: 'utf-8' });
+
+  // Format the file with Prettier
+  await exec(`npx prettier ${enumPath} --write`);
+
   logger.success('Built Locales Enum');
 }
 
