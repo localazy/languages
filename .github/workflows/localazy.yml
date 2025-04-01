@@ -4,12 +4,12 @@ on:
   push:
     paths:
       - 'src/data/translations/*.json'
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   localazy-upload:
     name: Upload strings to Localazy
-    runs-on: [ self-hosted, Linux ]
+    runs-on: [self-hosted, Linux]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

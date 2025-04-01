@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 import fse from 'fs-extra';
-import localazyLanguages from '../../src/data/localazy-languages.json' with { type: 'json' };
-import { Logger } from '../utils/logger.mjs';
 import { basename } from 'path';
 import { fileURLToPath } from 'url';
+import { Logger } from '../utils/logger.mjs';
 
 const logger = new Logger(basename(fileURLToPath(import.meta.url)));
 
