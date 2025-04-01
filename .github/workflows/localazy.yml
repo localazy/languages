@@ -1,0 +1,21 @@
+name: Upload Locales
+
+on:
+  push:
+    paths:
+      - 'src/data/translations/*.json'
+    branches: [main]
+
+jobs:
+  localazy-upload:
+    name: Upload strings to Localazy
+    runs-on: [self-hosted, Linux]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload locales
+        uses: localazy/upload@v1
+        with:
+          read_key: ${{ secrets.LOCALAZY_READ_KEY }}
+          write_key: ${{ secrets.LOCALAZY_WRITE_KEY }}

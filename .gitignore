@@ -4,3 +4,5 @@ node_modules
 /coverage
 .env
 .cache
+localazy.keys.json
+/bin
