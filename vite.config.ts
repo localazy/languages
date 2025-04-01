@@ -6,7 +6,7 @@ import packageJson from './package.json';
 export default defineConfig({
   resolve: {
     alias: {
-      '@/': `${resolve(__dirname, '')}/src/`,
+      '@': resolve(import.meta.dirname, 'src'),
     },
   },
 
@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: {
-        languages: resolve(__dirname, 'src/index.ts'),
+        languages: resolve(import.meta.dirname, 'src/index.ts'),
       },
       name: 'languages',
       formats: ['es'],
