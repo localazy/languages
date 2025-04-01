@@ -7,7 +7,6 @@
  */
 
 // @reexport ./**/!(*.d).ts:export * from '@/$TS_PATH';
-export * from '@/data/translated-language-lists';
 export * from '@/enums/locales';
 export * from '@/functions/localazy-languages';
 export * from '@/functions/resolve-translated-list';
