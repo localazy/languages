@@ -1,4 +1,4 @@
-export type Language = {
+export interface Language {
   important: boolean;
   localazyId: number;
   name: string;

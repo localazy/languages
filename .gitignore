@@ -1,4 +1,16 @@
 node_modules
 /lib
+/dist
 /coverage
-.env
+localazy.keys.json
+/bin
+
+# IDE/Editor
+.idea
+.vscode
+
+# Husky hooks
+.husky/_/
+
+# Prettier and ESLint cache
+.cache
