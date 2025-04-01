@@ -1,3 +1,27 @@
+# 2.0.0 (2025-04-01)
+### 🔀 Pull Requests
+
+- [Update build #4](https://github.com/localazy/languages/pull/4)
+- [Drop json files from distribution. #2](https://github.com/localazy/languages/pull/2)
+- [0.1.10 #1](https://github.com/localazy/languages/pull/1)
+
+### 📚 Documentation
+
+- Add more links to readme. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- Update readme. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+
+### 🧰 Other Commits
+
+- Prettier & lint. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- Read built languages from env. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- Redo build scripts with vite. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- Remove generation of translated-language-lists. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- Update pipeline. ([5d4404d](https://github.com/localazy/languages/commit/5d4404d)) ([#4](https://github.com/localazy/languages/pull/4))
+- **release:** 1.0.0 ([460e412](https://github.com/localazy/languages/commit/460e412)) ([#2](https://github.com/localazy/languages/pull/2))
+- Drop json files from distribution. ([460e412](https://github.com/localazy/languages/commit/460e412)) ([#2](https://github.com/localazy/languages/pull/2))
+- **release:** 0.1.10 ([1e4a0aa](https://github.com/localazy/languages/commit/1e4a0aa)) ([#1](https://github.com/localazy/languages/pull/1))
+- **release:** 0.1.11 ([1e4a0aa](https://github.com/localazy/languages/commit/1e4a0aa)) ([#1](https://github.com/localazy/languages/pull/1))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
