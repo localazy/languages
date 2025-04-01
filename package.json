@@ -48,6 +48,7 @@
     "main-ts:build": "reexport src/index.ts",
     "post-build-scripts": "./scripts/post-build/index.mjs",
     "pre-build-scripts": "./scripts/pre-build/index.mjs",
+    "prepare": "husky",
     "prettier": "prettier --check --cache --cache-location .cache/prettier .",
     "prettier:fix": "prettier --write .",
     "typecheck": "tsc --noEmit"
@@ -63,6 +64,7 @@
     "dotenv": "^16.4.7",
     "eslint": "^9.23.0",
     "fs-extra": "^11.1.1",
+    "husky": "^9.1.7",
     "prettier": "3.5.3",
     "reexport": "^1.4.1",
     "typescript": "^5.8.2",
