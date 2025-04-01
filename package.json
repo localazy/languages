@@ -57,7 +57,7 @@
     "@localazy/cli": "^1.7.16",
     "@localazy/eslint-config": "^1.0.0-beta.2",
     "@localazy/prettier-config": "^1.0.0-beta.1",
-    "@localazy/tsconfig": "^1.0.0-beta.3",
+    "@localazy/tsconfig": "^1.0.0-beta.4",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.16",
     "dotenv": "^16.4.7",
