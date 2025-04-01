@@ -5,6 +5,7 @@ import cldrList from '../../src/data/cldr-multilingual-language-list.json' with 
 import { Logger } from '../utils/logger.mjs';
 import { basename } from 'path';
 import { fileURLToPath } from 'url';
+import { readEnvFile } from '../utils/resolve-env-file.mjs';
 
 const logger = new Logger(basename(fileURLToPath(import.meta.url)));
 
@@ -14,8 +15,6 @@ const logger = new Logger(basename(fileURLToPath(import.meta.url)));
  * @property {string?} region
  * @property {string?} script
  */
-
-const languages = ['cs', 'es', 'de'];
 
 /**
  * @description Get the substring before the first occurrence of a specified delimiter.
@@ -83,7 +82,10 @@ const firstUpperCaseData = (text) => {
 };
 
 async function runCommand() {
-  logger.info('Building Language Translations from CLDR');
+  const envFile = readEnvFile();
+  const languages = envFile.GENERATE_LOCALES?.split(',') || [];
+
+  logger.info(`Building Language Translations from CLDR into {languages}`);
   languages.forEach((language) => {
     const englishFileName = `./src/data/translations/en.json`;
     const translationFileName = `./src/data/translations/${language}.json`;
@@ -126,7 +128,7 @@ async function runCommand() {
       translationFileData[locale] = translation;
     });
 
-    fse.writeFileSync(translationFileName, JSON.stringify(translationFileData, null, 2), 'utf8');
+    fse.writeFileSync(translationFileName, `${JSON.stringify(translationFileData, null, 2)}\n`, 'utf8');
   });
   logger.success(`Built Language Translations from CLDR in ${languages.join(', ')}`);
 }
