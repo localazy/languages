@@ -1,3 +1,12 @@
+## 2.0.1 (2025-04-04)
+### 🔀 Pull Requests
+
+- [Upload all languages to Localazy. #6](https://github.com/localazy/languages/pull/6)
+
+### 🧰 Other Commits
+
+- Upload all languages to Localazy. ([ded5384](https://github.com/localazy/languages/commit/ded5384)) ([#6](https://github.com/localazy/languages/pull/6))
+
 # 2.0.0 (2025-04-01)
 ### 🔀 Pull Requests
 
