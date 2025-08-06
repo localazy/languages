@@ -11,14 +11,27 @@ const logger = new Logger(basename(fileURLToPath(import.meta.url)));
 
 async function runCommand() {
   logger.info('Building Locales Enum');
+
+  const sanitizedLanguagesMap = new Set();
+
   let content = 'export enum Locales {\n';
   localazyLanguages.forEach((language, index) => {
-    const sanitizedLanguage = language.name
+    let sanitizedLanguage = language.name
       .replace(/&/g, 'and')
       .replace(/[)(,.]/g, '')
       .replace(/[\s]/g, '_')
       .replace(/[-#’']/g, '_')
       .toUpperCase();
+
+    if (sanitizedLanguagesMap.has(sanitizedLanguage)) {
+      const oldSanitizedLanguage = sanitizedLanguage;
+      logger.warning(`Duplicate language: ${sanitizedLanguage}`);
+      sanitizedLanguage = `${sanitizedLanguage}_${language.localazyId}`;
+      logger.info(`Language name changed: ${oldSanitizedLanguage} -> ${sanitizedLanguage}`);
+    }
+
+    sanitizedLanguagesMap.add(sanitizedLanguage);
+
     content += `\t${sanitizedLanguage} = "${language.locale}"`;
     if (index !== localazyLanguages.length - 1) {
       content += ',\n';
