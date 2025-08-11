@@ -1,3 +1,15 @@
+## 2.0.3 (2025-08-11)
+### 🔀 Pull Requests
+
+- [Loc 2840 unify localazy languages for mt and create shared mapper #10](https://github.com/localazy/languages/pull/10)
+
+### ✨ Features
+
+- Add BCP47 property to Language interface for enhanced language metadata support. ([3376e58](https://github.com/localazy/languages/commit/3376e58)) ([#10](https://github.com/localazy/languages/pull/10))
+- Add new language entries for Algonquin, Ladin, and Ojibwa in translation files and update locales enum accordingly. ([3376e58](https://github.com/localazy/languages/commit/3376e58)) ([#10](https://github.com/localazy/languages/pull/10))
+- Enhance locales enum generation to handle duplicate language names with unique identifiers. ([3376e58](https://github.com/localazy/languages/commit/3376e58)) ([#10](https://github.com/localazy/languages/pull/10))
+- Update localazy-languages.json with new languages and locales, including additional metadata for BCP47 support. ([3376e58](https://github.com/localazy/languages/commit/3376e58)) ([#10](https://github.com/localazy/languages/pull/10))
+
 ## 2.0.2 (2025-08-06)
 ### 🔀 Pull Requests
 
