@@ -4,4 +4,5 @@ export interface Language {
   name: string;
   rtl: boolean;
   locale: string;
+  bcp47: string;
 }
