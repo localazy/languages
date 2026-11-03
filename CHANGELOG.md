@@ -1,3 +1,12 @@
+# 2.1.0 (2026-11-03)
+### 🔀 Pull Requests
+
+- [Add Slovak language support in translations and update environment configuration. #12](https://github.com/localazy/languages/pull/12)
+
+### ✨ Features
+
+- Add Slovak language support in translations and update environment configuration. ([d3cc6bd](https://github.com/localazy/languages/commit/d3cc6bd)) ([#12](https://github.com/localazy/languages/pull/12))
+
 ## 2.0.3 (2025-08-11)
 ### 🔀 Pull Requests
 
