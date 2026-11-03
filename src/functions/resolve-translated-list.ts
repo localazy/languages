@@ -8,6 +8,8 @@ export const resolveTranslatedList = async (locale: string) => {
       return (await import('../data/translations/en.json')).default;
     case 'es':
       return (await import('../data/translations/es.json')).default;
+    case 'sk':
+      return (await import('../data/translations/sk.json')).default;
     default:
       throw new Error(`Unsupported locale: ${locale}`);
   }
